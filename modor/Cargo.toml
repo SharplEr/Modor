@@ -1,0 +1,6 @@
+[package]
+name = "modor"
+version = "0.1.0"
+authors = ["Alexander Menshikov <sharplermc@gmail.com>"]
+
+[dependencies]
