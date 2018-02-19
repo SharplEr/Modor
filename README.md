@@ -1,12 +1,18 @@
-# Development principles
+# Modor
 
-## Task management
+## About
+
+Modor (**M**y **o**wn **d**atabase **o**n **R**ust) is distributed [CRDT](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) storage. It's [AP](https://en.wikipedia.org/wiki/CAP_theorem) system without heavy computing operations (like transactions or map-reduce).
+
+## Development principles
+
+### Task management
 
 1. No one can push into master branch directly. All changes should come from PR.
 2. No one can't create PR without issue.
 3. In case if your PR accidentally found bugs in old feature and can't work without fixing then your PR will be frozen until a bug in the old feature would not be fixed.
 
-## Code style and documentation
+### Code style and documentation
 
 1. Priorities in order from hi to low:
    1. **Maintainability**. Because code which can't be modified is dead.
@@ -19,7 +25,7 @@
 5. Should exist document which describes system on the high level. Because otherwise, the architecture will collapse.
 6. It's okay to write about functionality which development still in progress.
 
-## Testing
+### Testing
 
 1. No one can merge PR with untested features.
 2. All deterministic functions (without concurrency and IO) should have 100% test coverage.
