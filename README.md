@@ -18,7 +18,7 @@ The central level is `Data level` which allow to store and transform data in CRD
 
 Concurrency control mechanism takes messages from `Network level` convert it to tasks make thread-safe access to data and send it to thread pool on execution.
 
-###Network level
+### Network level
 The `Network level` allows sending and receiving messages. It also filters and transforms messages (encryption, compression, etc).
 
 
