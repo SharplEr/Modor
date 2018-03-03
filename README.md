@@ -4,6 +4,24 @@
 
 Modor (**M**y **o**wn **d**atabase **o**n **R**ust) is distributed [CRDT](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) storage. It's [AP](https://en.wikipedia.org/wiki/CAP_theorem) system without heavy computing operations (like transactions or map-reduce).
 
+## Architecture [in development]
+
+On the top level Modor architecture looks like that:
+
+![Modor architecture](arc.png)
+
+### Data level
+The central level is `Data level` which allow to store and transform data in CRDT structures. It's decomposed into three parts:
+- Concurrency control mechanism which helps to make parallel calculation with data.
+- The thread pool which makes this calculation.
+- CRDT store which contains the data.
+
+Concurrency control mechanism takes messages from `Network level` convert it to tasks make thread-safe access to data and send it to thread pool on execution.
+
+### Network level
+The `Network level` allows sending and receiving messages. It also filters and transforms messages (encryption, compression, etc).
+
+
 ## Development principles
 
 ### Task management
