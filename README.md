@@ -51,3 +51,13 @@ The `Network level` allows sending and receiving messages. It also filters and t
 4. Try to avoid design which entails using mock objects in tests.
 5. Floating test is also red test.
 6. For bug report should exist reproducer. But if some bug rarely appears in the async code, then it's enough to have a math proof of incorrectness. But the best solution extract async part for separated unit tests.
+
+### Releasing
+
+1. Version pattern is `x.y.z`.
+2. The first release is `0.1.0`. It also means first runnable prototype.
+3. An increment of `x` means broken backward compatibility.
+4. All versions with the same `x` except `x == 0` have backward compatibility.
+5. `z` is incremented when one month passed and 10 commits accumulated after the last release.
+6. At any time there is one active roadmap which decomposes a huge improvement to tasks, which can be decomposed too if necessary.
+7. `y` is incremented when a task from roadmap completed.
